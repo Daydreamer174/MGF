@@ -16,16 +16,11 @@
     "resource": [
         {
             "name": "官服",
-            "path": [
-                "{PROJECT_DIR}/resource"
-            ]
+            "path": ["{PROJECT_DIR}/resource"]
         },
         {
             "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
-            ]
+            "path": ["{PROJECT_DIR}/resource", "{PROJECT_DIR}/resource_bilibili"]
         }
     ],
     "task": [
@@ -36,16 +31,12 @@
         {
             "name": "选项任务",
             "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
+            "option": ["任务选项1"]
         },
         {
             "name": "参数任务",
             "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
+            "option": ["任务选项1"],
             "pipeline_override": {}
         }
     ],
