@@ -6,7 +6,7 @@ on:
 
 jobs:
   check_commit_name_in_pr:
-    if: ${{ !github.event.pull_request.merged && github.base_ref != 'master' }}
+    if: ${{ !github.event.pull_request.merged && github.base_ref != 'main' }}
     runs-on: ubuntu-latest
     steps:
       - name: Cleanup Previous Comment
