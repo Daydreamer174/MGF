@@ -161,8 +161,8 @@ labels:
     content:
     regexes: "[Rr]emove (?:[Ll]abels? |)(?:`|)incomplete(?:`|)"
 
-  # `MAA Team`
-  - name: MAA Team
+  # `MGF Team`
+  - name: MGF Team
     mode:
       add: [pull_request_target, issues]
     author_association:
