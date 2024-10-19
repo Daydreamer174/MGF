@@ -156,7 +156,6 @@ jobs:
           done
       - uses: softprops/action-gh-release@v2
         with:
-          body_path: CHANGELOG.md
           files: assets/*
           prerelease: ${{ needs.meta.outputs.prerelease != 'false' }}
           tag_name: ${{ needs.meta.outputs.tag }}
