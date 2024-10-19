@@ -5,10 +5,7 @@ on:
     branches:
       - "dev"
     paths:
-      - "resource/**/*.png"
-      - "docs/.vuepress/public/image/**"
-      - "website/apps/web/public/**"
-      - "website/apps/web/src/assets/links/**"
+      - "assets/resource/image/*.png"
   workflow_dispatch:
     inputs:
       commit_message:
@@ -79,5 +76,5 @@ jobs:
         if: steps.commit_changes.outputs.have_commits == 'True'
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.MAA_RESOURCE_SYNC }}
+          github_token: ${{ secrets.DAYDREAMER14_MGF_WORKFLOW }}
           branch: ${{ github.ref }}
