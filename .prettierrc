@@ -10,7 +10,7 @@
             "files": [".clang-format", "**/*.yml", "**/*.yaml"],
             "options": {
                 "parser": "yaml",
-                "tabWidth": 4
+                "tabWidth": 2
             }
         }
     ]
