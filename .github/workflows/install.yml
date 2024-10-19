@@ -29,9 +29,24 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.DAYDREAMER114_MGF_WORKFLOW }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
+          path: temp
           fetch-depth: 0
+          show-progress: false
+
+      - name: Fetch history
+        if: ${{ !startsWith(github.ref, 'refs/pull/') }}
+        run: |
+          git init
+          cp $GITHUB_WORKSPACE/temp/.git/config ./.git
+          rm -rf $GITHUB_WORKSPACE/temp
+          # git config remote.origin.fetch '+refs/*:refs/*'
+          git fetch --filter=tree:0 # --update-head-ok
+          git reset --hard origin/$(git branch --show-current) || true
+          git checkout ${{ github.ref_name }}
+
       - name: Set tag
         id: set_tag
         run: |
@@ -156,6 +171,7 @@ jobs:
           done
       - uses: softprops/action-gh-release@v2
         with:
+          body_path: CHANGELOG.md
           files: assets/*
           prerelease: ${{ needs.meta.outputs.prerelease != 'false' }}
           tag_name: ${{ needs.meta.outputs.tag }}
