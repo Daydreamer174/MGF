@@ -123,6 +123,4 @@ Win10 或者 Win11 系统自带了一份 "Python"，但它其实只是一个安�
 
 感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
 
-<a href="https://github.com/MaaXYZ/MaaFramework/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MaaXYZ/MaaFramework&max=1000" />
-</a>
+[![Contributors](https://contributors-img.web.app/image?repo=Daydreamer174/MGF&max=105&columns=15)](https://github.com/Daydreamer174/MGF/graphs/contributors)
