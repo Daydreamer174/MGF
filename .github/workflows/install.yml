@@ -22,6 +22,8 @@ on:
 jobs:
   meta:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.DAYDREAMER114_MGF_WORKFLOW }}
     steps:
       - uses: actions/checkout@v4
         with:
