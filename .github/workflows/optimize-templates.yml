@@ -76,5 +76,5 @@ jobs:
         if: steps.commit_changes.outputs.have_commits == 'True'
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.DAYDREAMER14_MGF_WORKFLOW }}
+          github_token: ${{ secrets.DAYDREAMER174_OPTIMIZE_TEMPLATES }}
           branch: ${{ github.ref }}
