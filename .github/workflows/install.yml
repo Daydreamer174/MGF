@@ -28,10 +28,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.DAYDREAMER114_MGF_WORKFLOW }}
-    outputs:
-      tag: ${{ steps.set_tag.outputs.tag }}
-      prerelease: ${{ steps.set_pre.outputs.prerelease }}
-      is_release: ${{ steps.set_tag.outputs.is_release }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -72,6 +68,10 @@ jobs:
         with:
           name: changelog
           path: CHANGELOG.md
+    outputs:
+      tag: ${{ steps.set_tag.outputs.tag }}
+      prerelease: ${{ steps.set_pre.outputs.prerelease }}
+      is_release: ${{ steps.set_tag.outputs.is_release }}
 
   update:
     needs: meta
