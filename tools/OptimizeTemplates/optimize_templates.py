@@ -159,14 +159,9 @@ if __name__ == '__main__':
             perfect_pngs = json.load(f)
 
     if len(paths) == 0:
-        docs_dir = cur_dir.parent.parent / "docs"
-        website_dir = cur_dir.parent.parent / "website"
-        resource_dir = cur_dir.parent.parent / "resource"
+        assets_dir = cur_dir.parent.parent / "assets"
         paths = [
-            str(resource_dir / "global"),
-            str(resource_dir / "template"),
-            str(docs_dir),
-            str(website_dir),
+            str(assets_dir / "resource" / "image"),
         ]
         print("no path specified, use default paths:", paths)
 
