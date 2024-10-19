@@ -9,6 +9,10 @@
 * Ci: 更新 reviewer @晓丶梦丶仁
 * Ci: 更新 reviewer @晓丶梦丶仁
 
+### 文档 | Docs
+
+* Auto Generate Changelog of Release v0.0.1 (#19) @github-actions[bot]
+
 ### 其他 | Other
 
 * 为 change log 添加 gitignore @晓丶梦丶仁
