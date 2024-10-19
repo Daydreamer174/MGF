@@ -8,8 +8,6 @@ repos:
     hooks:
       - id: oxipng
         args: ["-q", "-o", "2", "-s", "--ng"]
-        env:
-          MY_TOKEN: ${{ secrets.DAYDREAMER174_OPTIMIZE_TEMPLATES }}
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v4.0.0-alpha.8
     hooks:
@@ -17,8 +15,6 @@ repos:
         types_or:
           - yaml
           - json
-        env:
-          MY_TOKEN: ${{ secrets.DAYDREAMER174_OPTIMIZE_TEMPLATES }}
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.13.0
     hooks:
@@ -27,8 +23,6 @@ repos:
         types:
           - markdown
         args: ["--fix", "--config", "docs/.markdownlint.yaml", "#**/node_modules"]
-        env:
-          MY_TOKEN: ${{ secrets.DAYDREAMER174_OPTIMIZE_TEMPLATES }}
   #- repo: https://github.com/lycheeverse/lychee
   #  rev: v0.15.1
   #  hooks:
