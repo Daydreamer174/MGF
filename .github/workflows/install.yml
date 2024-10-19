@@ -39,6 +39,7 @@ jobs:
       - name: Set tag
         id: set_tag
         run: |
+          is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
           ${{ startsWith(github.ref, 'refs/pull/') && 'cd temp' || '' }}
           echo tag=$(git describe --tags --match "v*" ${{ github.ref }} || git rev-parse --short HEAD) | tee -a $GITHUB_OUTPUT
           exit ${PIPESTATUS[0]}
