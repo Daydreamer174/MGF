@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.MAARELEASE_RELEASE }}
+          token: ${{ secrets.DAYDREAMER114_MGF_WORKFLOW }}
 
       - name: Git config
         run: |
