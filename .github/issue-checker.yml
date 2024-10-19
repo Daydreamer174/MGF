@@ -297,7 +297,8 @@ labels:
   # `module: others`
   - name: others
     content: "module: others"
-    regexes: "(?:抽卡|采购中心|信用|拜访|登录|账号切换|更新日志|(?:干员|仓库|视频)识别|\
+    regexes:
+      "(?:抽卡|采购中心|信用|拜访|登录|账号切换|更新日志|(?:干员|仓库|视频)识别|\
       [Vv]isit|[Ll]ogin|[Cc]redit|[Aa]ccount [Ss]witch|[Cc]hangelog)"
     skip-if:
       - skip all
@@ -348,7 +349,8 @@ labels:
   # `WpfGui`
   - name: WpfGui
     content: "client: WpfGui"
-    regexes: "远程控制|外部通知|(?:自|自动|定时|软件)(?:下载|更新|启动|执行|检测)|图形化?界面|\
+    regexes:
+      "远程控制|外部通知|(?:自|自动|定时|软件)(?:下载|更新|启动|执行|检测)|图形化?界面|\
       [Gg][Uu][Ii](?!\\.)|[Aa]uto [Ss]tart|[Rr]emote [Cc]ontrol|[Ee]xternal [Nn]otifications|[Ss]chedule"
     skip-if:
       - skip all
@@ -493,7 +495,8 @@ labels:
 
   # `fixed`
   - name: fixed
-    regexes: "(?:(?:`v\\d+\\.\\d+\\.\\d+(?:-(?:alpha|beta|rc)\\.\\d+|\\.\\d+|)`|\
+    regexes:
+      "(?:(?:`v\\d+\\.\\d+\\.\\d+(?:-(?:alpha|beta|rc)\\.\\d+|\\.\\d+|)`|\
       v\\d+\\.\\d+\\.\\d+(?:-(?:alpha|beta|rc)\\.\\d+|\\.\\d+|)\\s+)|\
       \\[(?:`v\\d+\\.\\d+\\.\\d+(?:-(?:alpha|beta|rc)\\.\\d+|\\.\\d+|)`|\
       v\\d+\\.\\d+\\.\\d+(?:-(?:alpha|beta|rc)\\.\\d+|\\.\\d+|))\\]\\(\\S*\\)|\
