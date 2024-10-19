@@ -89,9 +89,9 @@ jobs:
           branch: "changelog"
           delete-branch: true
           reviewers: |
-            AnnAngela
+            Daydreamer114
           assignees: |
-            AnnAngela
+            Daydreamer114
 
       - name: Add reviewers to release PR
         uses: kentaro-m/auto-assign-action@v2.0.0
