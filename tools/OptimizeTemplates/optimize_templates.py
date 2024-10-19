@@ -37,20 +37,7 @@ def remove_auxiliary_data(input_file, output_file):
 
 def get_file_id(file_path: str):
     file_id = file_path.replace("\\", "/")
-    # resource\\global\\{SERVERNAME}\\resource\\template\\xxx.png-> {SERVERNAME}/xxx
-    m = re.search(r"global/(\w+)/resource/template/([^/]+)\.png", file_id)
-    if m: return f"{m.group(1)}/{m.group(2)}"
-    # resource\\template\\xxx.png-> official/xxx
-    m = re.search(r"template/([^/]+)\.png", file_id)
-    if m: return f"official/{m.group(1)}"
-    # resource\\PATH\\TO\\xxx.png-> resource/PATH/TO/xxx
-    m = re.search(r"resource/(.*)\.png", file_id)
-    if m: return f"resource/{m.group(1)}"
-    # docs\\.vuepress\\public\\image\\PATH\\TO\\xxx.png -> docs/PATH/TO/xxx
-    m = re.search(r"docs/.vuepress/public/image/(.*)\.png", file_id)
-    if m: return f"docs/{m.group(1)}"
-    # website\\apps\\web\\PATH\\TO\\xxx.png -> web/PATH/TO/xxx
-    m = re.search(r"website/apps/web/(.*)\.png", file_id)
+    m = re.search(r"assets/resource/image/(.*)\.png", file_id)
     if m: return f"web/{m.group(1)}"
 
     return None
